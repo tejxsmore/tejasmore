@@ -1,0 +1,90 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+/* === Global Styles === */
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-height: 100%;
+	color: #fff7d4;
+	background-color: #1a120b;
+	box-sizing: border-box;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	font-family: 'GeneralSans', sans-serif;
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover {
+	background: transparent;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+/* Fix bullet and number marker colors */
+.prose ul > li::marker,
+.prose ol > li::marker {
+	color: #fff7d4 !important;
+}
+
+/* === General Sans Font Faces (OTF) === */
+@font-face {
+	font-family: 'GeneralSans';
+	src: url('/fonts/GeneralSans/OTF/GeneralSans-Extralight.otf') format('opentype');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GeneralSans';
+	src: url('/fonts/GeneralSans/OTF/GeneralSans-Light.otf') format('opentype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GeneralSans';
+	src: url('/fonts/GeneralSans/OTF/GeneralSans-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GeneralSans';
+	src: url('/fonts/GeneralSans/OTF/GeneralSans-Medium.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GeneralSans';
+	src: url('/fonts/GeneralSans/OTF/GeneralSans-Semibold.otf') format('opentype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GeneralSans';
+	src: url('/fonts/GeneralSans/OTF/GeneralSans-Bold.otf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GeneralSans';
+	src: url('/fonts/GeneralSans/OTF/GeneralSans-Italic.otf') format('opentype');
+	font-style: italic;
+	font-weight: 400;
+}
