@@ -3,7 +3,6 @@
 
 	let { children } = $props();
 	import Navbar from '$lib/components/Navbar.svelte';
-	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 </script>
 
 <svelte:head>
