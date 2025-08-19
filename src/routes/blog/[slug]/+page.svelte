@@ -54,7 +54,7 @@
 		<hr class="hidden border-[#3E3232] md:block" />
 		<div class="space-y-10 sm:space-y-20 lg:flex lg:flex-row-reverse lg:gap-20 lg:space-y-0">
 			<div
-				class="h-full w-full space-y-5 border border-[#3E3232] bg-[#000000]/50 p-5 md:sticky md:top-10 lg:max-w-1/3"
+				class="h-full w-full space-y-5 border border-[#3E3232] bg-[#000000]/50 p-5 lg:sticky lg:top-10 lg:max-w-1/3"
 			>
 				<h2 class="text-2xl font-semibold">Table of Contents</h2>
 				<nav>
