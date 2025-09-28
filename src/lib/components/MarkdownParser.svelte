@@ -84,7 +84,7 @@
 			'<blockquote class="border-l-3 border-black pl-3 py-1.5 italic bg-gray-200 my-3 text-[#fff7d4]">$1</blockquote>'
 		);
 		// Horizontal rule
-		html = html.replace(/^\-\-\-$/gm, '<hr class="border-t my-5 mb-7.5 border-[#3E3232]">');
+		html = html.replace(/^\-\-\-$/gm, '<hr class="border-t my-5 mb-7.5 border-[#255344]">');
 		// Links
 		html = html.replace(
 			/\[([^\]]+)\]$$([^)]+)$$/g,
