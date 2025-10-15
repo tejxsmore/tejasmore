@@ -59,9 +59,23 @@
 			<a
 				href="/assets/tejasmore-resume.pdf"
 				download="tejasmore-resume.pdf"
-				class="cursor-pointer rounded-full bg-[#fcf0cc] px-5 py-2 text-sm font-medium text-[#212121] transition-colors duration-300 hover:bg-[#fceec5]"
+				class="group relative inline-flex min-w-[50px] cursor-pointer items-center justify-center rounded-full bg-[#fcf0cc] px-5 py-2 text-sm font-medium text-[#212121] transition-colors duration-300 hover:bg-[#f1c097]"
 			>
-				Resume
+				<span class="transition-opacity duration-300 group-hover:opacity-0"> Resume </span>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="2"
+					stroke="currentColor"
+					class="absolute size-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+					/>
+				</svg>
 			</a>
 			<button
 				onclick={toggleMenu}
@@ -105,7 +119,7 @@
 
 	{#if menu}
 		<div
-			class="fixed inset-0 top-20 z-50 h-screen w-full overflow-y-auto bg-[#d84315] p-5 transition-opacity duration-300 md:hidden"
+			class="fixed inset-0 top-22 z-50 h-screen w-full overflow-y-auto bg-[#d84315] p-5 transition-opacity duration-300 md:hidden"
 		>
 			<div class="space-y-5 text-xl font-semibold">
 				<a

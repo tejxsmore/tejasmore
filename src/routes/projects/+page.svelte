@@ -97,7 +97,7 @@
 							>
 							<a
 								href={link.live}
-								class="flex items-center gap-2 rounded-full bg-[#fcf0cc] p-2 px-5 text-sm font-medium text-[#212121]"
+								class="flex items-center gap-2 rounded-full bg-[#fcf0cc] p-2 px-5 text-sm font-medium text-[#212121] transition-colors duration-300 hover:bg-[#f1c097]"
 							>
 								Visit
 								<svg

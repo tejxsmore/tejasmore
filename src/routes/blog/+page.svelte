@@ -30,7 +30,7 @@
 	}
 </script>
 
-<div class="grid gap-5 p-5 py-10 md:grid-cols-2 md:px-20 md:py-20 xl:px-40">
+<div class="grid gap-5 p-5 py-10 md:grid-cols-2 md:px-20 md:py-20 xl:grid-cols-3 xl:px-40">
 	{#each blogs as blog}
 		<div class="space-y-5 rounded-[15px] border border-[#e27549] bg-[#dd5c2f] p-5 py-4">
 			<div>
