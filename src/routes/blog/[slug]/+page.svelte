@@ -25,9 +25,9 @@
 				'December'
 			];
 			const day = String(date.getDate()).padStart(2, '0');
-			const month = months[date.getMonth()];
+			const month = months[date.getMonth()].slice(0, 3);
 			const year = date.getFullYear();
-			return `${day} ${month}, ${year}`;
+			return `${day} ${month} ${year}`;
 		} catch {
 			return 'Invalid date';
 		}
@@ -49,20 +49,22 @@
 
 <div class="p-5 py-10 md:px-20 md:py-20 xl:px-40">
 	<main class="order-2 flex-1 space-y-10 md:order-1 md:space-y-20">
-		<h1 class="mx-auto max-w-4xl text-center text-[28px] font-semibold md:text-5xl">
+		<h1 class="mx-auto max-w-4xl text-center text-[30px] font-bold md:text-6xl">
 			{blog.title}
 		</h1>
-		<p class="text-center font-mono text-[#858b59]">{formatDate(blog.createdAt).toUpperCase()}</p>
-		<hr class="hidden border-[#255344] md:block" />
+		<p class="text-center text-sm font-semibold text-[#eca77d]">
+			{formatDate(blog.createdAt)}
+		</p>
+		<hr class="hidden border-[#dd5c2f] md:block" />
 		<div class="space-y-10 sm:space-y-20 lg:flex lg:flex-row-reverse lg:gap-20 lg:space-y-0">
 			<div
-				class="h-full w-full space-y-5 border border-[#255344] bg-[#1c332c] p-5 lg:sticky lg:top-10 lg:max-w-1/3"
+				class="h-full w-full space-y-5 rounded-[15px] border border-[#e27549] bg-[#dd5c2f] p-5 lg:sticky lg:top-10 lg:max-w-1/3"
 			>
 				<h2 class="text-2xl font-semibold">Table of Contents</h2>
 				<nav>
 					<ul class="">
 						{#each tableOfContentsHeadings as heading (heading.id)}
-							<li class="py-2.5 transition-all duration-200 hover:text-[#858b59]">
+							<li class="py-2.5 transition-colors duration-300 hover:text-[#f1c097]">
 								<a
 									onclick={() => scrollToHeading(heading.id)}
 									href={`#${heading.id}`}

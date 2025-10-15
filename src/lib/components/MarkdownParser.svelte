@@ -57,7 +57,7 @@
 				6: 'text-xs'
 			};
 			newHtmlParts.push(
-				`<h${level} id="${id}" class="${sizeMap[level]} pt-5 pb-2.5 font-medium text-[#fff7d4]">${headingText}</h${level}>`
+				`<h${level} id="${id}" class="${sizeMap[level]} pt-5 pb-2.5 font-medium text-[#fcf0cc]">${headingText}</h${level}>`
 			);
 
 			lastIndex = headingRegex.lastIndex;
@@ -71,24 +71,27 @@
 		// Inline code
 		html = html.replace(
 			/`([^`]+)`/g,
-			'<code class="bg-gray-300 px-1.5 py-0.5 rounded font-mono text-sm text-[#fff7d4]">$1</code>'
+			'<code class="bg-gray-300 px-1.5 py-0.5 rounded font-mono text-sm text-[#fcf0cc]">$1</code>'
 		);
 		// Bold and italic (limit to font-semibold, not full bold)
-		html = html.replace(/\*\*(.*?)\*\*/g, '<strong class="font-medium text-[#fff7d4]">$1</strong>');
-		html = html.replace(/__(.*?)__/g, '<strong class="font-semibold text-[#fff7d4]">$1</strong>');
-		html = html.replace(/\*(.*?)\*/g, '<em class="text-[#fff7d4]">$1</em>');
-		html = html.replace(/_(.*?)_/g, '<em class="text-[#fff7d4]">$1</em>');
+		html = html.replace(
+			/\*\*(.*?)\*\*/g,
+			'<strong class="font-semibold text-[#fcf0cc]">$1</strong>'
+		);
+		html = html.replace(/__(.*?)__/g, '<strong class="font-bold text-[#fcf0cc]">$1</strong>');
+		html = html.replace(/\*(.*?)\*/g, '<em class="text-[#fcf0cc]">$1</em>');
+		html = html.replace(/_(.*?)_/g, '<em class="text-[#fcf0cc]">$1</em>');
 		// Blockquote
 		html = html.replace(
 			/^> (.*$)/gm,
-			'<blockquote class="border-l-3 border-black pl-3 py-1.5 italic bg-gray-200 my-3 text-[#fff7d4]">$1</blockquote>'
+			'<blockquote class="border-l-3 border-black pl-3 py-1.5 italic bg-[#e27549] my-3 text-[#fcf0cc]">$1</blockquote>'
 		);
 		// Horizontal rule
-		html = html.replace(/^\-\-\-$/gm, '<hr class="border-t my-5 mb-7.5 border-[#255344]">');
+		html = html.replace(/^\-\-\-$/gm, '<hr class="border-t my-5 mb-7.5 border-[#dd5c2f]">');
 		// Links
 		html = html.replace(
 			/\[([^\]]+)\]$$([^)]+)$$/g,
-			'<a href="$2" class="text-[#fff7d4] hover:underline">$1</a>'
+			'<a href="$2" class="text-[#fcf0cc] hover:underline">$1</a>'
 		);
 		// Images
 		html = html.replace(
@@ -100,8 +103,8 @@
 		html = processLists(html);
 
 		// Paragraphs
-		html = html.replace(/^(?!<[a-z\/].*>)(.+)$/gm, '<p class="my-5 text-[#fff7d4]">$1</p>');
-		html = html.replace(/<p class="my-5 text-[#fff7d4]"><\/p>/g, ''); // Remove empty paragraphs
+		html = html.replace(/^(?!<[a-z\/].*>)(.+)$/gm, '<p class="my-5 text-[#fcf0cc]">$1</p>');
+		html = html.replace(/<p class="my-5 text-[#fcf0cc]"><\/p>/g, ''); // Remove empty paragraphs
 		html = html.replace(/<\/p>\s*<p/g, '</p>\n<p'); // Ensure paragraphs are on new lines
 
 		return { html, headings: tempHeadings };
@@ -112,12 +115,12 @@
 		// Detect bullet list items
 		html = html.replace(/^(\s*)([\-\*]) (.*$)/gm, (match, space, bullet, content) => {
 			const indent = space.length;
-			return `<li data-indent="${indent}" class="mb-1 text-[#fff7d4]">${content}</li>`;
+			return `<li data-indent="${indent}" class="mb-1 text-[#fcf0cc]">${content}</li>`;
 		});
 		// Detect numbered list items
 		html = html.replace(/^(\s*)(\d+\.) (.*$)/gm, (match, space, number, content) => {
 			const indent = space.length;
-			return `<li data-indent="${indent}" data-ordered="true" class="mb-1 text-[#fff7d4]">${content}</li>`;
+			return `<li data-indent="${indent}" data-ordered="true" class="mb-1 text-[#fcf0cc]">${content}</li>`;
 		});
 
 		const lines = html.split('\n');
@@ -130,8 +133,8 @@
 				const isOrdered = line.includes('data-ordered="true"');
 				const listType = isOrdered ? 'ol' : 'ul';
 				const listClass = isOrdered
-					? 'list-decimal pl-5 marker:font-medium marker:text-[#fff7d4]'
-					: 'list-disc pl-5 marker:font-medium marker:text-[#fff7d4]';
+					? 'list-decimal pl-5 marker:font-medium marker:text-[#fcf0cc]'
+					: 'list-disc pl-5 marker:font-medium marker:text-[#fcf0cc]';
 
 				while (listStack.length > indent) {
 					result.push(`</${listStack.pop()!}>`);

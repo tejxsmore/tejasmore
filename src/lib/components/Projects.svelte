@@ -1,84 +1,12 @@
 <script lang="ts">
-	const projects = [
-		{
-			name: 'Cryptoden',
-			slug: 'cryptoden',
-			image: '/assets/cryptoden.png',
-			summary: 'Crypto NFT Trading Platform',
-			description:
-				'A decentralized platform where users can explore all NFTs available on the marketplace, view real-time prices of various cryptocurrencies, connect their crypto wallet, and seamlessly buy or sell NFTs.',
-			stack: ['React', 'Nextjs'],
-			link: {
-				live: 'https://cryptoden.vercel.app',
-				github: 'https://github.com/tejxsmore/cryptoden',
-				youtube: 'https://youtube.com'
-			}
-		},
-		{
-			name: 'Hirehero',
-			slug: 'hirehero',
-			image: '/assets/hirehero.png',
-			summary: 'Full fledged Job Portal',
-			description:
-				'End-to-end hiring platform with real-time communication, built-in code editor for interviews, and instant updates. Built with SvelteKit, PostgreSQL, and AWS.',
-			stack: ['SvelteKit', 'Socket.io'],
-			link: {
-				live: 'https://hirehero.tejasmore.in',
-				github: 'https://github.com/tejxsmore/hirehero',
-				youtube: 'https://youtube.com'
-			}
-		},
-		{
-			name: 'Tekstack',
-			slug: 'tekstack',
-			image: '/assets/tekstack.png',
-			summary: 'Software review and Blogging Platform',
-			description:
-				'Your all-in-one platform to discover, and learn about the latest and best tools in AI, productivity, automation. It is a platform where users can write, read, update, and delete blogs, with support for tags.',
-			stack: ['SvelteKit', 'Hygraph CMS'],
-			link: {
-				live: 'https://tekstack.tejasmore.in',
-				github: 'https://github.com/tejxsmore/tekstack',
-				youtube: 'https://youtube.com'
-			}
-		},
-		{
-			name: 'Teker',
-			slug: 'teker',
-			image: '/assets/tekstack.png',
-			summary: 'Crypto NFT Trading Platform',
-			description:
-				'A decentralized platform where users can explore all NFTs available on the marketplace, view real-time prices of various cryptocurrencies, connect their crypto wallet, and seamlessly buy or sell NFTs.',
-			stack: ['SvelteKit', 'PostgreSQL'],
-			link: {
-				live: 'https://teker.vercel.app',
-				github: 'https://github.com/tejxsmore/teker',
-				youtube: 'https://youtube.com'
-			}
-		},
-		{
-			name: 'Nanolink',
-			slug: 'nanolink',
-			image: '/assets/nanolink.png',
-			summary: 'URL shortener with custom links',
-			description:
-				'It is a Rust based URL shortener. User can create custom and random url links which is stored in a secured database, user can see the analytics on these links in the dashboard',
-			stack: ['Rust', 'PostgreSQL'],
-			link: {
-				live: 'https://nanolink.tejasmore.in',
-				github: 'https://github.com/tejxsmore/nanolink',
-				youtube: 'https://youtube.com'
-			}
-		}
-	];
 </script>
 
 <div class="min-h-screen space-y-10">
 	<h2 class="text-center text-2xl font-semibold">Projects</h2>
 	<div class="grid gap-5 md:grid-cols-3">
 		{#each projects as project, i}
-			<div class="border border-[#255344] bg-[#1c332c]">
-				<img src={project.image} alt={project.name} class="border-b border-[#255344]" />
+			<div class="border border-[#0058AC] bg-[#09192A]">
+				<img src={project.image} alt={project.name} class="border-b border-[#0058AC]" />
 
 				<div class="space-y-5 p-5">
 					<div class="flex items-center justify-between">
@@ -177,7 +105,7 @@
 					</div>
 					<div class="flex gap-5">
 						{#each project.stack as stack}
-							<p class="rounded-full bg-[#1e4035] px-3 py-1 text-sm font-normal">{stack}</p>
+							<p class="rounded-full bg-[#5E4534] px-3 py-1 text-sm font-normal">{stack}</p>
 						{/each}
 					</div>
 				</div>
