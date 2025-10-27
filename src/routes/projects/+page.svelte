@@ -65,6 +65,7 @@
 						<div class="flex items-center gap-3">
 							<a
 								href={link.github}
+								target="_blank"
 								aria-label={`GitHub repository for ${name}`}
 								class="rounded-full bg-[#e27549] p-2 text-[#f6d9b1] transition-colors duration-300 hover:bg-[#fcf0cc] hover:text-[#1c1c1c]"
 							>
@@ -82,6 +83,7 @@
 							</a>
 							<a
 								href={link.youtube}
+								target="_blank"
 								aria-label={`Project demo of ${name}`}
 								class="rounded-full bg-[#e27549] p-2 text-[#f6d9b1] transition-colors duration-300 hover:bg-[#fcf0cc] hover:text-[#f70a0a]"
 								><svg
@@ -97,6 +99,7 @@
 							>
 							<a
 								href={link.live}
+								target="_blank"
 								class="flex items-center gap-2 rounded-full bg-[#fcf0cc] p-2 px-5 text-sm font-medium text-[#212121] transition-colors duration-300 hover:bg-[#f1c097]"
 							>
 								Visit
