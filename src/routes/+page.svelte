@@ -1,5 +1,6 @@
 <script>
 	import Contact from '$lib/components/Contact.svelte';
+	import Music from '$lib/components/Music.svelte';
 	import Reviews from '$lib/components/Reviews.svelte';
 </script>
 
@@ -29,5 +30,6 @@
 	</div>
 </div>
 
+<Music />
 <Reviews />
 <Contact />
