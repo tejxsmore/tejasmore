@@ -57,7 +57,7 @@
 <div class="flex justify-center p-5 py-10 md:px-20 md:py-20 xl:px-40">
 	<div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
 		{#each projects as { name, slug, image, summary, stack, link }}
-			<div class="rounded-[15px] border border-[#e27549] bg-[#dd5c2f]">
+			<div class="rounded-[15px] border border-[#094a4a] bg-[#0a3b3b]">
 				<img src={image} alt={`Image of ${name}`} class="rounded-[15px] p-1 pb-0" />
 				<div class="space-y-5 p-5">
 					<div class="flex items-center justify-between">
@@ -67,7 +67,7 @@
 								href={link.github}
 								target="_blank"
 								aria-label={`GitHub repository for ${name}`}
-								class="rounded-full bg-[#e27549] p-2 text-[#f6d9b1] transition-colors duration-300 hover:bg-[#fcf0cc] hover:text-[#1c1c1c]"
+								class="rounded-full bg-[#094a4a] p-2 text-[#fcf0cc] transition-colors duration-300 hover:bg-[#fcf0cc] hover:text-[#212121]"
 							>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +85,7 @@
 								href={link.youtube}
 								target="_blank"
 								aria-label={`Project demo of ${name}`}
-								class="rounded-full bg-[#e27549] p-2 text-[#f6d9b1] transition-colors duration-300 hover:bg-[#fcf0cc] hover:text-[#f70a0a]"
+								class="rounded-full bg-[#094a4a] p-2 text-[#fcf0cc] transition-colors duration-300 hover:bg-[#fcf0cc] hover:text-[#f70a0a]"
 								><svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="20"
@@ -100,7 +100,7 @@
 							<a
 								href={link.live}
 								target="_blank"
-								class="flex items-center gap-2 rounded-full bg-[#fcf0cc] p-2 px-5 text-sm font-medium text-[#212121] transition-colors duration-300 hover:bg-[#f1c097]"
+								class="flex items-center gap-2 rounded-full bg-[#fcf0cc] p-2 px-5 text-sm font-medium text-[#062121] transition-colors duration-300 hover:bg-[#dcd7b9]"
 							>
 								Visit
 								<svg
@@ -120,10 +120,12 @@
 							</a>
 						</div>
 					</div>
-					<p class="text-[#f6d9b1]">{summary}</p>
+					<p class="font-medium text-[#96a38f]">{summary}</p>
 					<div class="flex gap-3">
 						{#each stack as stack}
-							<p class="rounded-full bg-[#e27549] px-3 py-0.5 text-sm text-[#fcf0cc]">{stack}</p>
+							<p class="rounded-full bg-[#094a4a] px-3 py-0.5 text-sm font-medium text-[#fcf0cc]">
+								{stack}
+							</p>
 						{/each}
 					</div>
 				</div>

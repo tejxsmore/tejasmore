@@ -219,7 +219,7 @@
 			onmouseleave={handleMouseLeave}
 		>
 			<div
-				class="overflow-hidden rounded-[15px] border border-[#e27549] bg-[#dd5c2f] p-2 opacity-95 backdrop-blur-xl"
+				class="overflow-hidden rounded-[15px] border border-[#094a4a] bg-[#0a3b3b] p-2 opacity-95 backdrop-blur-xl"
 			>
 				<div class="relative flex items-center gap-2">
 					<!-- Album Art -->
@@ -243,10 +243,10 @@
 										? 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
 										: 'none'};"
 								>
-									<h2 class="truncate text-base font-semibold text-white">
+									<h2 class="truncate text-base font-semibold text-[#fcf0cc]">
 										{getPrevTrack().title}
 									</h2>
-									<p class="truncate text-sm font-medium text-[#eca77d]">
+									<p class="truncate text-sm font-medium text-[#96a38f]">
 										{getPrevTrack().artist} • {getPrevTrack().album}
 									</p>
 								</div>
@@ -259,10 +259,10 @@
 									? 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
 									: 'none'};"
 							>
-								<h2 class="truncate text-base font-semibold text-white">
+								<h2 class="truncate text-base font-semibold text-[#fcf0cc]">
 									{tracks[current].title}
 								</h2>
-								<p class="truncate text-sm font-medium text-[#eca77d]">
+								<p class="truncate text-sm font-medium text-[#96a38f]">
 									{tracks[current].artist} • {tracks[current].album}
 								</p>
 							</div>
@@ -275,10 +275,10 @@
 										? 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
 										: 'none'};"
 								>
-									<h2 class="truncate text-base font-semibold text-white">
+									<h2 class="text-[#fcf0cc ] truncate text-base font-semibold">
 										{getNextTrack().title}
 									</h2>
-									<p class="truncate text-sm font-medium text-[#eca77d]">
+									<p class="truncate text-sm font-medium text-[#96a38f]">
 										{getNextTrack().artist} • {getNextTrack().album}
 									</p>
 								</div>
@@ -290,7 +290,7 @@
 					<div class="flex-shrink-0">
 						<button
 							onclick={togglePlay}
-							class="cursor-pointer rounded-full bg-[#e27549] p-3 text-[#fcf0cc] transition-colors hover:bg-[#f06c3f] focus:outline-none"
+							class="cursor-pointer rounded-full bg-[#094a4a] p-3 text-[#fcf0cc] transition-colors hover:bg-[#084343] focus:outline-none"
 							aria-label={isPlaying ? 'Pause' : 'Play'}
 						>
 							{#if isPlaying}

@@ -52,20 +52,21 @@
 		</div>
 		<div class="flex items-center gap-3 tracking-wide md:gap-10">
 			<div class="hidden space-x-10 font-medium md:block">
-				<a href="/projects" class="transition-colors duration-300 hover:text-[#f1c097]">Projects</a>
-				<a href="/blog" class="transition-colors duration-300 hover:text-[#f1c097]">Blog</a>
-				<a href="/gallery" class="transition-colors duration-300 hover:text-[#f1c097]">Gallery</a>
+				<a href="/projects" class="transition-colors duration-300 hover:text-[#96a38f]">Projects</a>
+				<a href="/blog" class="transition-colors duration-300 hover:text-[#96a38f]">Blog</a>
+				<a href="/gallery" class="transition-colors duration-300 hover:text-[#96a38f]">Gallery</a>
 			</div>
 			<a
 				href="/assets/tejasmore-resume.pdf"
 				download="tejasmore-resume.pdf"
-				class="flex items-center gap-2 rounded-full bg-[#fcf0cc] p-2 px-5 text-sm font-medium text-[#212121] transition-colors duration-300 hover:bg-[#f1c097]"
+				class="flex items-center gap-2 rounded-full bg-[#fcf0cc] p-2 px-5 text-sm font-medium text-[#062121] transition-colors duration-300 hover:bg-[#f1c097]"
 			>
 				Resume
 			</a>
 			<button
 				onclick={toggleMenu}
-				class="cursor-pointer rounded-full bg-[#fcf0cc] p-2.5 text-[#212121] transition-colors focus:outline-none md:hidden"
+				class="cursor-pointer rounded-full bg-[#fcf0cc] p-2.5
+				text-[#062121] transition-colors focus:outline-none md:hidden"
 				aria-label="Toggle mobile menu"
 				aria-expanded={menu}
 			>
@@ -105,12 +106,12 @@
 
 	{#if menu}
 		<div
-			class="fixed inset-0 top-22 z-50 h-screen w-full overflow-y-auto bg-[#d84315] p-5 transition-opacity duration-300 md:hidden"
+			class="fixed inset-0 top-22 z-50 h-screen w-full overflow-y-auto bg-[#062121] p-5 transition-opacity duration-300 md:hidden"
 		>
 			<div class="space-y-5 text-xl font-semibold">
 				<a
 					href="/projects"
-					class="flex items-center justify-between transition-colors duration-300 hover:text-[#f1c097]"
+					class="flex items-center justify-between transition-colors duration-300 hover:text-[#96a38f]"
 				>
 					<p>Projects</p>
 					<div class="p-2">
@@ -132,7 +133,7 @@
 				</a>
 				<a
 					href="/blog"
-					class="flex items-center justify-between transition-colors duration-300 hover:text-[#f1c097]"
+					class="flex items-center justify-between transition-colors duration-300 hover:text-[#96a38f]"
 				>
 					<p>Blog</p>
 					<div class="p-2">
@@ -154,7 +155,7 @@
 				</a>
 				<a
 					href="/gallery"
-					class="flex items-center justify-between transition-colors duration-300 hover:text-[#f1c097]"
+					class="flex items-center justify-between transition-colors duration-300 hover:text-[#96a38f]"
 				>
 					<p>Gallery</p>
 					<div class="p-2">
